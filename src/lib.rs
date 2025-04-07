@@ -735,10 +735,10 @@ impl Renderer {
                         clip_rect[1].max(0.0).floor() as u32,
                         (clip_rect[2].min(fb_size[0]) - clip_rect[0].max(0.0))
                             .abs()
-                            .ceil() as u32,
+                            .floor() as u32,
                         (clip_rect[3].min(fb_size[1]) - clip_rect[1].max(0.0))
                             .abs()
-                            .ceil() as u32,
+                            .floor() as u32,
                     );
 
                     // XXX: Work-around for wgpu issue [1] by only issuing draw
